@@ -26,6 +26,8 @@ Even though this board was specifically designed to condition the signals coming
 - *12V charger r3.zip* contains KiCad files for the 12V lead-adic battery charger PCB w/ 20W solar panel. This board is optional to power the Radiometer PCB board and arduino.
 - *Radiometer PCB* contains KiCad files for the amplification and signal conditioning circuit. MKR1400 boards is connected to this board.
 
+- *Sample log.txt* is example of the serial interface with the device.
+
 
 **Uploaded files content example**
 
