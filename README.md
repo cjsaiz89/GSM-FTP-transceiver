@@ -17,4 +17,5 @@ Even though this board was specifically designed to condition the signals coming
 
 
 **Files**
-- ZIP file contains the .ino code, and the instructions. Some standard libraries *.h* and *.c* need to be changed.
+- ZIP file contains the .ino code, headers and instructions. Some standard libraries *.h* and *.c* need to be changed.
+- Use *ADC_mode.h* to change ADC resolution, and sampling configuration.
