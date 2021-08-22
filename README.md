@@ -14,3 +14,7 @@ Even though this board was specifically designed to condition the signals coming
 - A H2O data plan allows to send up to 100MB within 3 months, with a cost of (~$10).
 
 - Sampling configuration needs to be specified at the beginning of the set up. GSM network configuration needs to be uploaded with the code.
+
+
+**Files**
+- ZIP file contains the .ino code, and the instructions. Some standard libraries *.h* and *.c* need to be changed.
