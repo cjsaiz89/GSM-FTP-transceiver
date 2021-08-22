@@ -1,0 +1,606 @@
+---------- EPPLEY RADIOMETER DATA LOGGER SYSTEM ---------- 
+Software version FTPv9.ino Mar-2021 
+Calibration according to EPPLEY PIR-PSP Radiometer r2 12-2020 PCB - S/N 37741F3 PSP & S/N 38446F3 PIR 
+Data lines will be shown as follows:
+MMDDYYhhmmss PSP_AVG PSP_MIN PSP_MAX PIR_AVG PIR_MIN PIR_MAX [W.m-2]
+-------------------- ENTER SETTINGS ---------------------- 
+1) SELECT DATALOGGER MODE:
+[1]-SD card & transmission to ftp, [2]-Only store in SD card, [3]-Print to serial only
+Note: if [1], data is stored in SD card and sent to the ftp server at the end of each day
+Enter data logger mode : 1
+
+3) ENTER SAMPING TIME: Sampling time in seconds to average and store per line of data
+ --> ex.: 60 sec will create a line of data every 60 seconds
+Enter sampling time: 30
+
+4) ENTER SAMPLING FREQUENCY: Sampling frequency in Hz to determine averages, min and max within the sampling time
+Enter sampling frequency: 2
+30 seconds and 2 Hz. Correct? [y/n]:y
+
+Retrieve UTC time automatically from network [a] or enter manually [m]?: a
+Connecting to GSM network... Connected to GSM Network
+Current carrier: stk.mobi
+Signal Strength: 45.16 %
+Retrieving time from network...
+UTC time retrieved from network: 25/03/21 17:56:41
+Clock started...
+
+Correct? [y/n]: y
+
+
+Upload test file? [y/n]: y
+
+Upload test...
+1 - Connected to ftp ftp.aoml.noaa.gov
+1 - /phod/incoming/christian.saiz/radiometer01 directory created/opened
+test.txt file created/opened on server 
+70 bytes - Line 0/6:
+MMDDYYhhmmss PSP_AVG PSP_MIN PSP_MAX PIR_AVG PIR_MIN PIR_MAX [W.m-2]
+OK -> Sent
+41 bytes - Line 1/6:
+032521000230 201 201 203 1162 1159 1167
+OK -> Sent
+41 bytes - Line 2/6:
+032521000300 201 201 202 1162 1159 1166
+OK -> Sent
+41 bytes - Line 3/6:
+032521000330 201 201 202 1161 1160 1165
+OK -> Sent
+41 bytes - Line 4/6:
+032521000400 201 201 202 1163 1160 1167
+OK -> Sent
+41 bytes - Line 5/6:
+032521000430 201 201 201 1163 1160 1167
+OK -> Sent
+18 bytes - Line 6/6:
+END OF TEST FILE
+OK -> Sent
+ftp closed
+All lines were uploaded
+End of upload test
+
+Upload test...
+1 - Connected to ftp f19-preview.royalwebhosting.net
+1 - /Radiometer directory created/opened
+test.txt file created/opened on server 
+70 bytes - Line 0/6:
+MMDDYYhhmmss PSP_AVG PSP_MIN PSP_MAX PIR_AVG PIR_MIN PIR_MAX [W.m-2]
+OK -> Sent
+41 bytes - Line 1/6:
+032521000230 201 201 203 1162 1159 1167
+OK -> Sent
+41 bytes - Line 2/6:
+032521000300 201 201 202 1162 1159 1166
+OK -> Sent
+41 bytes - Line 3/6:
+032521000330 201 201 202 1161 1160 1165
+OK -> Sent
+41 bytes - Line 4/6:
+032521000400 201 201 202 1163 1160 1167
+OK -> Sent
+41 bytes - Line 5/6:
+032521000430 201 201 201 1163 1160 1167
+OK -> Sent
+18 bytes - Line 6/6:
+END OF TEST FILE
+OK -> Sent
+ftp closed
+All lines were uploaded
+End of upload test
+
+2) SELECT START-END TIME FOR SAMPLING 
+Note: Consider 1 min of dead time before start sampling if manual time was selected
+Enter START hour in 24h format: 17
+Enter START minute: 59
+Enter END hour in 24h format: 18
+Enter END minute: 4
+One file with 5.00 minutes of data will be created every day
+Correct? [y/n]: y
+card initialized.
+GSM disconnected
+03252117.txt file opened to write
+1 -> PSP: 221  PIR: 1231 W/m2
+2 -> PSP: 222  PIR: 1233 W/m2
+3 -> PSP: 221  PIR: 1232 W/m2
+4 -> PSP: 222  PIR: 1233 W/m2
+5 -> PSP: 222  PIR: 1232 W/m2
+6 -> PSP: 221  PIR: 1232 W/m2
+7 -> PSP: 221  PIR: 1234 W/m2
+8 -> PSP: 222  PIR: 1234 W/m2
+9 -> PSP: 221  PIR: 1232 W/m2
+10 -> PSP: 221  PIR: 1230 W/m2
+11 -> PSP: 221  PIR: 1232 W/m2
+12 -> PSP: 221  PIR: 1231 W/m2
+13 -> PSP: 221  PIR: 1232 W/m2
+14 -> PSP: 222  PIR: 1233 W/m2
+15 -> PSP: 222  PIR: 1233 W/m2
+16 -> PSP: 221  PIR: 1233 W/m2
+17 -> PSP: 221  PIR: 1230 W/m2
+18 -> PSP: 222  PIR: 1231 W/m2
+19 -> PSP: 222  PIR: 1233 W/m2
+20 -> PSP: 221  PIR: 1232 W/m2
+21 -> PSP: 222  PIR: 1231 W/m2
+22 -> PSP: 221  PIR: 1232 W/m2
+23 -> PSP: 221  PIR: 1232 W/m2
+24 -> PSP: 221  PIR: 1231 W/m2
+25 -> PSP: 222  PIR: 1231 W/m2
+26 -> PSP: 221  PIR: 1231 W/m2
+27 -> PSP: 222  PIR: 1234 W/m2
+28 -> PSP: 221  PIR: 1233 W/m2
+29 -> PSP: 222  PIR: 1232 W/m2
+30 -> PSP: 221  PIR: 1231 W/m2
+31 -> PSP: 221  PIR: 1232 W/m2
+32 -> PSP: 222  PIR: 1234 W/m2
+33 -> PSP: 221  PIR: 1231 W/m2
+34 -> PSP: 222  PIR: 1233 W/m2
+35 -> PSP: 221  PIR: 1233 W/m2
+36 -> PSP: 221  PIR: 1233 W/m2
+37 -> PSP: 222  PIR: 1233 W/m2
+38 -> PSP: 222  PIR: 1233 W/m2
+39 -> PSP: 221  PIR: 1233 W/m2
+40 -> PSP: 222  PIR: 1233 W/m2
+41 -> PSP: 221  PIR: 1232 W/m2
+42 -> PSP: 221  PIR: 1232 W/m2
+43 -> PSP: 222  PIR: 1232 W/m2
+44 -> PSP: 222  PIR: 1233 W/m2
+45 -> PSP: 222  PIR: 1232 W/m2
+46 -> PSP: 222  PIR: 1232 W/m2
+47 -> PSP: 221  PIR: 1231 W/m2
+48 -> PSP: 221  PIR: 1234 W/m2
+49 -> PSP: 221  PIR: 1232 W/m2
+50 -> PSP: 222  PIR: 1232 W/m2
+51 -> PSP: 221  PIR: 1232 W/m2
+52 -> PSP: 222  PIR: 1231 W/m2
+53 -> PSP: 221  PIR: 1232 W/m2
+54 -> PSP: 221  PIR: 1231 W/m2
+55 -> PSP: 221  PIR: 1232 W/m2
+56 -> PSP: 222  PIR: 1231 W/m2
+57 -> PSP: 221  PIR: 1233 W/m2
+58 -> PSP: 221  PIR: 1233 W/m2
+59 -> PSP: 221  PIR: 1231 W/m2
+032521180030 221 221 222 1232 1230 1234
+1 -> PSP: 221  PIR: 1232 W/m2
+2 -> PSP: 221  PIR: 1234 W/m2
+3 -> PSP: 222  PIR: 1233 W/m2
+4 -> PSP: 222  PIR: 1232 W/m2
+5 -> PSP: 222  PIR: 1232 W/m2
+6 -> PSP: 222  PIR: 1231 W/m2
+7 -> PSP: 221  PIR: 1232 W/m2
+8 -> PSP: 222  PIR: 1233 W/m2
+9 -> PSP: 221  PIR: 1235 W/m2
+10 -> PSP: 222  PIR: 1233 W/m2
+11 -> PSP: 221  PIR: 1234 W/m2
+12 -> PSP: 222  PIR: 1232 W/m2
+13 -> PSP: 222  PIR: 1233 W/m2
+14 -> PSP: 222  PIR: 1233 W/m2
+15 -> PSP: 222  PIR: 1234 W/m2
+16 -> PSP: 222  PIR: 1232 W/m2
+17 -> PSP: 222  PIR: 1232 W/m2
+18 -> PSP: 221  PIR: 1232 W/m2
+19 -> PSP: 221  PIR: 1233 W/m2
+20 -> PSP: 222  PIR: 1234 W/m2
+21 -> PSP: 221  PIR: 1234 W/m2
+22 -> PSP: 221  PIR: 1232 W/m2
+23 -> PSP: 221  PIR: 1236 W/m2
+24 -> PSP: 222  PIR: 1233 W/m2
+25 -> PSP: 221  PIR: 1234 W/m2
+26 -> PSP: 221  PIR: 1235 W/m2
+27 -> PSP: 221  PIR: 1236 W/m2
+28 -> PSP: 222  PIR: 1236 W/m2
+29 -> PSP: 221  PIR: 1231 W/m2
+30 -> PSP: 221  PIR: 1233 W/m2
+31 -> PSP: 221  PIR: 1235 W/m2
+32 -> PSP: 221  PIR: 1235 W/m2
+33 -> PSP: 221  PIR: 1235 W/m2
+34 -> PSP: 222  PIR: 1236 W/m2
+35 -> PSP: 221  PIR: 1236 W/m2
+36 -> PSP: 221  PIR: 1234 W/m2
+37 -> PSP: 221  PIR: 1234 W/m2
+38 -> PSP: 222  PIR: 1234 W/m2
+39 -> PSP: 221  PIR: 1236 W/m2
+40 -> PSP: 222  PIR: 1231 W/m2
+41 -> PSP: 221  PIR: 1233 W/m2
+42 -> PSP: 222  PIR: 1233 W/m2
+43 -> PSP: 222  PIR: 1234 W/m2
+44 -> PSP: 221  PIR: 1233 W/m2
+45 -> PSP: 221  PIR: 1233 W/m2
+46 -> PSP: 221  PIR: 1233 W/m2
+47 -> PSP: 221  PIR: 1232 W/m2
+48 -> PSP: 222  PIR: 1232 W/m2
+49 -> PSP: 222  PIR: 1231 W/m2
+50 -> PSP: 221  PIR: 1231 W/m2
+51 -> PSP: 221  PIR: 1232 W/m2
+52 -> PSP: 221  PIR: 1232 W/m2
+53 -> PSP: 222  PIR: 1232 W/m2
+54 -> PSP: 222  PIR: 1233 W/m2
+55 -> PSP: 221  PIR: 1234 W/m2
+56 -> PSP: 221  PIR: 1233 W/m2
+57 -> PSP: 221  PIR: 1233 W/m2
+58 -> PSP: 221  PIR: 1230 W/m2
+59 -> PSP: 221  PIR: 1231 W/m2
+032521180100 221 221 222 1233 1230 1236
+1 -> PSP: 221  PIR: 1232 W/m2
+2 -> PSP: 221  PIR: 1232 W/m2
+3 -> PSP: 221  PIR: 1230 W/m2
+4 -> PSP: 222  PIR: 1227 W/m2
+5 -> PSP: 221  PIR: 1232 W/m2
+6 -> PSP: 221  PIR: 1233 W/m2
+7 -> PSP: 221  PIR: 1232 W/m2
+8 -> PSP: 221  PIR: 1231 W/m2
+9 -> PSP: 222  PIR: 1231 W/m2
+10 -> PSP: 222  PIR: 1230 W/m2
+11 -> PSP: 221  PIR: 1232 W/m2
+12 -> PSP: 221  PIR: 1233 W/m2
+13 -> PSP: 221  PIR: 1231 W/m2
+14 -> PSP: 221  PIR: 1231 W/m2
+15 -> PSP: 222  PIR: 1231 W/m2
+16 -> PSP: 221  PIR: 1231 W/m2
+17 -> PSP: 221  PIR: 1233 W/m2
+18 -> PSP: 221  PIR: 1231 W/m2
+19 -> PSP: 221  PIR: 1230 W/m2
+20 -> PSP: 221  PIR: 1231 W/m2
+21 -> PSP: 221  PIR: 1230 W/m2
+22 -> PSP: 222  PIR: 1231 W/m2
+23 -> PSP: 222  PIR: 1231 W/m2
+24 -> PSP: 221  PIR: 1232 W/m2
+25 -> PSP: 221  PIR: 1233 W/m2
+26 -> PSP: 222  PIR: 1231 W/m2
+27 -> PSP: 222  PIR: 1234 W/m2
+28 -> PSP: 221  PIR: 1231 W/m2
+29 -> PSP: 221  PIR: 1232 W/m2
+30 -> PSP: 221  PIR: 1230 W/m2
+31 -> PSP: 221  PIR: 1233 W/m2
+32 -> PSP: 221  PIR: 1234 W/m2
+33 -> PSP: 221  PIR: 1237 W/m2
+34 -> PSP: 221  PIR: 1232 W/m2
+35 -> PSP: 221  PIR: 1233 W/m2
+36 -> PSP: 221  PIR: 1234 W/m2
+37 -> PSP: 221  PIR: 1232 W/m2
+38 -> PSP: 221  PIR: 1232 W/m2
+39 -> PSP: 222  PIR: 1230 W/m2
+40 -> PSP: 221  PIR: 1231 W/m2
+41 -> PSP: 221  PIR: 1233 W/m2
+42 -> PSP: 222  PIR: 1233 W/m2
+43 -> PSP: 222  PIR: 1232 W/m2
+44 -> PSP: 221  PIR: 1233 W/m2
+45 -> PSP: 222  PIR: 1233 W/m2
+46 -> PSP: 222  PIR: 1232 W/m2
+47 -> PSP: 222  PIR: 1233 W/m2
+48 -> PSP: 222  PIR: 1234 W/m2
+49 -> PSP: 222  PIR: 1237 W/m2
+50 -> PSP: 221  PIR: 1230 W/m2
+51 -> PSP: 221  PIR: 1232 W/m2
+52 -> PSP: 222  PIR: 1233 W/m2
+53 -> PSP: 221  PIR: 1234 W/m2
+54 -> PSP: 222  PIR: 1231 W/m2
+55 -> PSP: 221  PIR: 1239 W/m2
+56 -> PSP: 222  PIR: 1237 W/m2
+57 -> PSP: 221  PIR: 1233 W/m2
+58 -> PSP: 221  PIR: 1232 W/m2
+59 -> PSP: 221  PIR: 1232 W/m2
+032521180130 221 221 222 1232 1227 1239
+1 -> PSP: 222  PIR: 1231 W/m2
+2 -> PSP: 221  PIR: 1232 W/m2
+3 -> PSP: 221  PIR: 1234 W/m2
+4 -> PSP: 221  PIR: 1232 W/m2
+5 -> PSP: 221  PIR: 1233 W/m2
+6 -> PSP: 221  PIR: 1236 W/m2
+7 -> PSP: 222  PIR: 1232 W/m2
+8 -> PSP: 221  PIR: 1232 W/m2
+9 -> PSP: 221  PIR: 1233 W/m2
+10 -> PSP: 221  PIR: 1232 W/m2
+11 -> PSP: 221  PIR: 1231 W/m2
+12 -> PSP: 222  PIR: 1234 W/m2
+13 -> PSP: 222  PIR: 1234 W/m2
+14 -> PSP: 221  PIR: 1231 W/m2
+15 -> PSP: 221  PIR: 1232 W/m2
+16 -> PSP: 221  PIR: 1231 W/m2
+17 -> PSP: 221  PIR: 1232 W/m2
+18 -> PSP: 221  PIR: 1233 W/m2
+19 -> PSP: 222  PIR: 1233 W/m2
+20 -> PSP: 221  PIR: 1233 W/m2
+21 -> PSP: 221  PIR: 1231 W/m2
+22 -> PSP: 221  PIR: 1231 W/m2
+23 -> PSP: 222  PIR: 1230 W/m2
+24 -> PSP: 222  PIR: 1230 W/m2
+25 -> PSP: 221  PIR: 1234 W/m2
+26 -> PSP: 221  PIR: 1234 W/m2
+27 -> PSP: 221  PIR: 1232 W/m2
+28 -> PSP: 221  PIR: 1230 W/m2
+29 -> PSP: 221  PIR: 1232 W/m2
+30 -> PSP: 221  PIR: 1232 W/m2
+31 -> PSP: 221  PIR: 1233 W/m2
+32 -> PSP: 221  PIR: 1232 W/m2
+33 -> PSP: 221  PIR: 1232 W/m2
+34 -> PSP: 221  PIR: 1232 W/m2
+35 -> PSP: 221  PIR: 1233 W/m2
+36 -> PSP: 221  PIR: 1235 W/m2
+37 -> PSP: 222  PIR: 1233 W/m2
+38 -> PSP: 221  PIR: 1233 W/m2
+39 -> PSP: 222  PIR: 1233 W/m2
+40 -> PSP: 222  PIR: 1233 W/m2
+41 -> PSP: 222  PIR: 1233 W/m2
+42 -> PSP: 221  PIR: 1233 W/m2
+43 -> PSP: 222  PIR: 1235 W/m2
+44 -> PSP: 221  PIR: 1240 W/m2
+45 -> PSP: 222  PIR: 1234 W/m2
+46 -> PSP: 221  PIR: 1230 W/m2
+47 -> PSP: 221  PIR: 1231 W/m2
+48 -> PSP: 221  PIR: 1232 W/m2
+49 -> PSP: 222  PIR: 1232 W/m2
+50 -> PSP: 222  PIR: 1231 W/m2
+51 -> PSP: 222  PIR: 1233 W/m2
+52 -> PSP: 222  PIR: 1231 W/m2
+53 -> PSP: 222  PIR: 1233 W/m2
+54 -> PSP: 221  PIR: 1233 W/m2
+55 -> PSP: 221  PIR: 1233 W/m2
+56 -> PSP: 221  PIR: 1230 W/m2
+57 -> PSP: 221  PIR: 1232 W/m2
+58 -> PSP: 221  PIR: 1231 W/m2
+59 -> PSP: 221  PIR: 1231 W/m2
+032521180200 221 221 222 1232 1230 1240
+1 -> PSP: 222  PIR: 1231 W/m2
+2 -> PSP: 221  PIR: 1232 W/m2
+3 -> PSP: 221  PIR: 1232 W/m2
+4 -> PSP: 222  PIR: 1233 W/m2
+5 -> PSP: 221  PIR: 1231 W/m2
+6 -> PSP: 222  PIR: 1231 W/m2
+7 -> PSP: 221  PIR: 1231 W/m2
+8 -> PSP: 221  PIR: 1232 W/m2
+9 -> PSP: 221  PIR: 1231 W/m2
+10 -> PSP: 222  PIR: 1232 W/m2
+11 -> PSP: 222  PIR: 1231 W/m2
+12 -> PSP: 221  PIR: 1231 W/m2
+13 -> PSP: 222  PIR: 1232 W/m2
+14 -> PSP: 221  PIR: 1232 W/m2
+15 -> PSP: 222  PIR: 1231 W/m2
+16 -> PSP: 221  PIR: 1230 W/m2
+17 -> PSP: 221  PIR: 1232 W/m2
+18 -> PSP: 221  PIR: 1231 W/m2
+19 -> PSP: 222  PIR: 1230 W/m2
+20 -> PSP: 222  PIR: 1231 W/m2
+21 -> PSP: 222  PIR: 1232 W/m2
+22 -> PSP: 221  PIR: 1233 W/m2
+23 -> PSP: 222  PIR: 1232 W/m2
+24 -> PSP: 221  PIR: 1234 W/m2
+25 -> PSP: 221  PIR: 1234 W/m2
+26 -> PSP: 222  PIR: 1233 W/m2
+27 -> PSP: 221  PIR: 1231 W/m2
+28 -> PSP: 221  PIR: 1232 W/m2
+29 -> PSP: 221  PIR: 1232 W/m2
+30 -> PSP: 221  PIR: 1232 W/m2
+31 -> PSP: 222  PIR: 1234 W/m2
+32 -> PSP: 222  PIR: 1234 W/m2
+33 -> PSP: 221  PIR: 1232 W/m2
+34 -> PSP: 221  PIR: 1232 W/m2
+35 -> PSP: 222  PIR: 1231 W/m2
+36 -> PSP: 221  PIR: 1232 W/m2
+37 -> PSP: 222  PIR: 1233 W/m2
+38 -> PSP: 221  PIR: 1234 W/m2
+39 -> PSP: 222  PIR: 1231 W/m2
+40 -> PSP: 222  PIR: 1232 W/m2
+41 -> PSP: 221  PIR: 1230 W/m2
+42 -> PSP: 222  PIR: 1234 W/m2
+43 -> PSP: 221  PIR: 1232 W/m2
+44 -> PSP: 221  PIR: 1232 W/m2
+45 -> PSP: 222  PIR: 1231 W/m2
+46 -> PSP: 222  PIR: 1232 W/m2
+47 -> PSP: 221  PIR: 1233 W/m2
+48 -> PSP: 221  PIR: 1235 W/m2
+49 -> PSP: 222  PIR: 1231 W/m2
+50 -> PSP: 221  PIR: 1231 W/m2
+51 -> PSP: 221  PIR: 1232 W/m2
+52 -> PSP: 221  PIR: 1231 W/m2
+53 -> PSP: 221  PIR: 1231 W/m2
+54 -> PSP: 221  PIR: 1231 W/m2
+55 -> PSP: 221  PIR: 1231 W/m2
+56 -> PSP: 222  PIR: 1233 W/m2
+57 -> PSP: 221  PIR: 1231 W/m2
+58 -> PSP: 221  PIR: 1231 W/m2
+59 -> PSP: 221  PIR: 1231 W/m2
+032521180230 221 221 222 1232 1230 1235
+1 -> PSP: 221  PIR: 1232 W/m2
+2 -> PSP: 222  PIR: 1233 W/m2
+3 -> PSP: 221  PIR: 1233 W/m2
+4 -> PSP: 221  PIR: 1231 W/m2
+5 -> PSP: 222  PIR: 1232 W/m2
+6 -> PSP: 221  PIR: 1233 W/m2
+7 -> PSP: 222  PIR: 1233 W/m2
+8 -> PSP: 222  PIR: 1233 W/m2
+9 -> PSP: 221  PIR: 1232 W/m2
+10 -> PSP: 222  PIR: 1234 W/m2
+11 -> PSP: 221  PIR: 1235 W/m2
+12 -> PSP: 221  PIR: 1232 W/m2
+13 -> PSP: 221  PIR: 1233 W/m2
+14 -> PSP: 221  PIR: 1231 W/m2
+15 -> PSP: 221  PIR: 1231 W/m2
+16 -> PSP: 221  PIR: 1230 W/m2
+17 -> PSP: 221  PIR: 1232 W/m2
+18 -> PSP: 221  PIR: 1233 W/m2
+19 -> PSP: 221  PIR: 1230 W/m2
+20 -> PSP: 221  PIR: 1231 W/m2
+21 -> PSP: 221  PIR: 1232 W/m2
+22 -> PSP: 221  PIR: 1231 W/m2
+23 -> PSP: 222  PIR: 1231 W/m2
+24 -> PSP: 222  PIR: 1232 W/m2
+25 -> PSP: 222  PIR: 1232 W/m2
+26 -> PSP: 222  PIR: 1232 W/m2
+27 -> PSP: 221  PIR: 1231 W/m2
+28 -> PSP: 221  PIR: 1232 W/m2
+29 -> PSP: 221  PIR: 1232 W/m2
+30 -> PSP: 221  PIR: 1233 W/m2
+31 -> PSP: 221  PIR: 1232 W/m2
+32 -> PSP: 221  PIR: 1233 W/m2
+33 -> PSP: 221  PIR: 1230 W/m2
+34 -> PSP: 222  PIR: 1231 W/m2
+35 -> PSP: 221  PIR: 1230 W/m2
+36 -> PSP: 222  PIR: 1232 W/m2
+37 -> PSP: 221  PIR: 1233 W/m2
+38 -> PSP: 221  PIR: 1233 W/m2
+39 -> PSP: 221  PIR: 1231 W/m2
+40 -> PSP: 221  PIR: 1231 W/m2
+41 -> PSP: 222  PIR: 1230 W/m2
+42 -> PSP: 222  PIR: 1231 W/m2
+43 -> PSP: 221  PIR: 1231 W/m2
+44 -> PSP: 221  PIR: 1231 W/m2
+45 -> PSP: 222  PIR: 1230 W/m2
+46 -> PSP: 222  PIR: 1231 W/m2
+47 -> PSP: 221  PIR: 1233 W/m2
+48 -> PSP: 221  PIR: 1231 W/m2
+49 -> PSP: 222  PIR: 1233 W/m2
+50 -> PSP: 221  PIR: 1232 W/m2
+51 -> PSP: 221  PIR: 1232 W/m2
+52 -> PSP: 221  PIR: 1232 W/m2
+53 -> PSP: 221  PIR: 1231 W/m2
+54 -> PSP: 222  PIR: 1231 W/m2
+55 -> PSP: 222  PIR: 1232 W/m2
+56 -> PSP: 221  PIR: 1231 W/m2
+57 -> PSP: 221  PIR: 1231 W/m2
+58 -> PSP: 221  PIR: 1236 W/m2
+59 -> PSP: 222  PIR: 1236 W/m2
+032521180300 221 221 222 1232 1230 1236
+1 -> PSP: 221  PIR: 1231 W/m2
+2 -> PSP: 221  PIR: 1232 W/m2
+3 -> PSP: 222  PIR: 1231 W/m2
+4 -> PSP: 221  PIR: 1230 W/m2
+5 -> PSP: 221  PIR: 1231 W/m2
+6 -> PSP: 222  PIR: 1234 W/m2
+7 -> PSP: 221  PIR: 1233 W/m2
+8 -> PSP: 222  PIR: 1232 W/m2
+9 -> PSP: 221  PIR: 1233 W/m2
+10 -> PSP: 221  PIR: 1231 W/m2
+11 -> PSP: 221  PIR: 1235 W/m2
+12 -> PSP: 221  PIR: 1237 W/m2
+13 -> PSP: 221  PIR: 1238 W/m2
+14 -> PSP: 221  PIR: 1238 W/m2
+15 -> PSP: 221  PIR: 1232 W/m2
+16 -> PSP: 221  PIR: 1233 W/m2
+17 -> PSP: 221  PIR: 1233 W/m2
+18 -> PSP: 221  PIR: 1231 W/m2
+19 -> PSP: 222  PIR: 1231 W/m2
+20 -> PSP: 222  PIR: 1232 W/m2
+21 -> PSP: 222  PIR: 1233 W/m2
+22 -> PSP: 221  PIR: 1231 W/m2
+23 -> PSP: 221  PIR: 1233 W/m2
+24 -> PSP: 221  PIR: 1233 W/m2
+25 -> PSP: 222  PIR: 1233 W/m2
+26 -> PSP: 222  PIR: 1233 W/m2
+27 -> PSP: 222  PIR: 1232 W/m2
+28 -> PSP: 222  PIR: 1234 W/m2
+29 -> PSP: 221  PIR: 1233 W/m2
+30 -> PSP: 221  PIR: 1236 W/m2
+31 -> PSP: 221  PIR: 1232 W/m2
+32 -> PSP: 221  PIR: 1231 W/m2
+33 -> PSP: 221  PIR: 1232 W/m2
+34 -> PSP: 221  PIR: 1232 W/m2
+35 -> PSP: 221  PIR: 1229 W/m2
+36 -> PSP: 221  PIR: 1233 W/m2
+37 -> PSP: 221  PIR: 1232 W/m2
+38 -> PSP: 221  PIR: 1233 W/m2
+39 -> PSP: 221  PIR: 1232 W/m2
+40 -> PSP: 222  PIR: 1232 W/m2
+41 -> PSP: 221  PIR: 1233 W/m2
+42 -> PSP: 221  PIR: 1231 W/m2
+43 -> PSP: 221  PIR: 1232 W/m2
+44 -> PSP: 222  PIR: 1232 W/m2
+45 -> PSP: 221  PIR: 1233 W/m2
+46 -> PSP: 221  PIR: 1233 W/m2
+47 -> PSP: 221  PIR: 1231 W/m2
+48 -> PSP: 222  PIR: 1232 W/m2
+49 -> PSP: 221  PIR: 1235 W/m2
+50 -> PSP: 222  PIR: 1233 W/m2
+51 -> PSP: 221  PIR: 1231 W/m2
+52 -> PSP: 221  PIR: 1232 W/m2
+53 -> PSP: 222  PIR: 1229 W/m2
+54 -> PSP: 221  PIR: 1232 W/m2
+55 -> PSP: 221  PIR: 1232 W/m2
+56 -> PSP: 222  PIR: 1234 W/m2
+57 -> PSP: 221  PIR: 1232 W/m2
+58 -> PSP: 221  PIR: 1232 W/m2
+59 -> PSP: 221  PIR: 1232 W/m2
+032521180330 221 221 222 1232 1229 1238
+Connecting to GSM network... Connected to GSM Network
+Current carrier: stk.mobi
+Signal Strength: 41.94 %
+Opening 03252117.txt ...03252117.txt file re-opened to read
+-> 357 bytes will be uploaded - Connecting to server 1...
+Server 1 - start
+1 - Not connected to ftp ftp.aoml.noaa.gov - check simultaneous sessions
+GSM disonnected
+Connecting to GSM network... Connected to GSM Network
+Current carrier: stk.mobi
+Signal Strength: 58.06 %
+2 - Not connected to ftp ftp.aoml.noaa.gov - check simultaneous sessions
+GSM disonnected
+Connecting to GSM network... Connected to GSM Network
+Current carrier: stk.mobi
+Signal Strength: 58.06 %
+3 - Connected to ftp ftp.aoml.noaa.gov
+1 - /phod/incoming/christian.saiz/radiometer01 directory created/opened
+03252117.txt file created/opened on server 
+70 bytes - Line 0/7:
+MMDDYYhhmmss PSP_AVG PSP_MIN PSP_MAX PIR_AVG PIR_MIN PIR_MAX [W.m-2]
+OK -> Sent
+41 bytes - Line 1/7:
+032521180030 221 221 222 1232 1230 1234
+OK -> Sent
+41 bytes - Line 2/7:
+032521180100 221 221 222 1233 1230 1236
+OK -> Sent
+41 bytes - Line 3/7:
+032521180130 221 221 222 1232 1227 1239
+OK -> Sent
+41 bytes - Line 4/7:
+032521180200 221 221 222 1232 1230 1240
+OK -> Sent
+41 bytes - Line 5/7:
+032521180230 221 221 222 1232 1230 1235
+OK -> Sent
+41 bytes - Line 6/7:
+032521180300 221 221 222 1232 1230 1236
+OK -> Sent
+41 bytes - Line 7/7:
+032521180330 221 221 222 1232 1229 1238
+OK -> Sent
+ftp closed
+All lines were uploaded
+184.64 seconds to upload
+Server 1 - end
+
+Opening 03252117.txt ...03252117.txt file re-opened to read
+-> 357 bytes will be uploaded - Connecting to server 2...
+Server 2 - start
+1 - Connected to ftp f19-preview.royalwebhosting.net
+1 - /Radiometer directory created/opened
+03252117.txt file created/opened on server 
+70 bytes - Line 0/7:
+MMDDYYhhmmss PSP_AVG PSP_MIN PSP_MAX PIR_AVG PIR_MIN PIR_MAX [W.m-2]
+OK -> Sent
+41 bytes - Line 1/7:
+032521180030 221 221 222 1232 1230 1234
+OK -> Sent
+41 bytes - Line 2/7:
+032521180100 221 221 222 1233 1230 1236
+OK -> Sent
+41 bytes - Line 3/7:
+032521180130 221 221 222 1232 1227 1239
+OK -> Sent
+41 bytes - Line 4/7:
+032521180200 221 221 222 1232 1230 1240
+OK -> Sent
+41 bytes - Line 5/7:
+032521180230 221 221 222 1232 1230 1235
+OK -> Sent
+41 bytes - Line 6/7:
+032521180300 221 221 222 1232 1230 1236
+OK -> Sent
+41 bytes - Line 7/7:
+032521180330 221 221 222 1232 1229 1238
+OK -> Sent
+ftp closed
+All lines were uploaded
+11.11 seconds to upload
+Server 2 - end
+
+GSM disconnected
+Waiting for next time window...
